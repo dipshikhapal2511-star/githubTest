@@ -1,1 +1,25 @@
+#include <stdio.h>
+#include <math.h>
 
+int main() {
+    double lambda_green = 530.0;
+    double lambda_red = 700.0;
+    double theta_green_deg = 65.0;
+    int m_green = 3;
+    int m_red = 2;
+
+    double theta_green = theta_green_deg * M_PI / 180.0;
+    double d = (m_green * lambda_green) / sin(theta_green);
+    double sin_theta_red = (m_red * lambda_red) / d;
+
+    if (sin_theta_red > 1.0) {
+        printf("No second-order maximum exists.\n");
+        return 0;
+    }
+
+    double theta_red = asin(sin_theta_red) * 180.0 / M_PI;
+
+    printf("%.2f\n", theta_red);
+
+    return 0;
+}
