@@ -19,6 +19,7 @@ int main() {
 
     double theta_red = asin(sin_theta_red) * 180.0 / M_PI;
     printf("%.2f\n", theta_red);
-
-    return 0;
+return 0;
 }
+
+    
