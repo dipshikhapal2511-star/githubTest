@@ -6,7 +6,7 @@ int m;
 double theta,d;
 printf("theta = ",theta);
 scanf("%lf",&theta);
-    printf("d = ", d); 
+     printf("d = ", d); 
 scanf("%lf",&d);
   theta = theta * 3.1416/180.0;
   d=d*1e-6;
